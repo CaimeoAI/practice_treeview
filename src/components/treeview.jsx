@@ -1,8 +1,8 @@
 
 
 
-export default function Treeview() {
-    
+export default function Treeview({menus = []}) {
+
     return (
         <div>
 
