@@ -7,8 +7,9 @@ export default function MenuList({list = []}){
         <div className="menu-list-wrapper">
             {
                 list && list.length ?
-                null
-
+                list.map((listItem) => 
+                    <MenuItem item={listItem} />
+                )
                 : null
             }
         </div>
