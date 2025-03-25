@@ -1,6 +1,6 @@
 import MenuItem from "./menu-item"
 
-
+//? Component that maps over a list of menu items and renders MenuItem for each
 export default function MenuList({list = []}){
 
     return (
@@ -8,6 +8,7 @@ export default function MenuList({list = []}){
             {
                 list && list.length ?
                 list.map((listItem) => 
+                    //? Renders each menu item
                     <MenuItem item={listItem} />
                 )
                 : null
