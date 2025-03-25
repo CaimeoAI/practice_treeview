@@ -1,5 +1,6 @@
 import Treeview from "./components/treeview"
 import menus from "./constants/data"
+import "./App.css"
 
 function App() {
   
