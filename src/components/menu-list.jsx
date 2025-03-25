@@ -4,7 +4,7 @@ import MenuItem from "./menu-item"
 export default function MenuList({list = []}){
 
     return (
-        <div className="menu-list-wrapper">
+        <ul className="menu-list-wrapper">
             {
                 list && list.length ?
                 list.map((listItem) => 
@@ -12,6 +12,6 @@ export default function MenuList({list = []}){
                 )
                 : null
             }
-        </div>
+        </ul>
     )
 }
