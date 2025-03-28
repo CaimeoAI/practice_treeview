@@ -8,6 +8,10 @@ export default function MenuItem({item}) {
 
     const [displayCurrentChildren, setDisplayCurrentChildren] = useState({})
 
+    //? Toggles the visibility of child menu items when clicking the '+' sign. It takes the label of the current menu item (getCurrentLabel) and:
+    //? Checks if the item is currently expanded or collapsed.
+    //? Flips its state (if it was open, it closes; if it was closed, it opens).
+    //? Keeps track of the expanded/collapsed state of multiple items by updating the displayCurrentChildren state.
     function handleToggleChildren(getCurrentLabel) {
         setDisplayCurrentChildren({
             ...displayCurrentChildren,
