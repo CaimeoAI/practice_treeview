@@ -8,6 +8,15 @@ export default function MenuItem({item}) {
 
     const [displayCurrentChildren, setDisplayCurrentChildren] = useState({})
 
+    function handleToggleChildren(getCurrentLabel) {
+        setDisplayCurrentChildren({
+            ...displayCurrentChildren,
+            [getCurrentLabel] : !displayCurrentChildren[getCurrentLabel]
+        })
+    }
+
+    console.log(displayCurrentChildren)
+
     return (
         <li>
             <div className="item-label">
@@ -15,7 +24,7 @@ export default function MenuItem({item}) {
                 {
                     //? If the item has children, add a '+' sign
                     item && item.children && item.children.length ? 
-                    <span>+</span>
+                    <span onClick={() => handleToggleChildren(item.label)}>+</span>
                     : null
                 }
             </div>
