@@ -1,0 +1,4 @@
+.item-label {
+    display: flex;
+    gap: 20px;
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MenuList from "./menu-list";
+import "../style/menu-item.css"
 
 
 //? Component that represents an individual menu item
@@ -9,7 +10,7 @@ export default function MenuItem({item}) {
 
     return (
         <li>
-            <div>
+            <div className="item-label">
                 <p>{item.label}</p>
                 {
                     //? If the item has children, add a '+' sign
