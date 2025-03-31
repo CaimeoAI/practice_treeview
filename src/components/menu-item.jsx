@@ -26,9 +26,13 @@ export default function MenuItem({item}) {
             <div className="item-label">
                 <p>{item.label}</p>
                 {
-                    //? If the item has children, add a '+' sign
+                    //? If the item has children, and displayCurrentChildren is true, then render a "+" otherwise render a "-"
                     item && item.children && item.children.length ? 
-                    <span onClick={() => handleToggleChildren(item.label)}>+</span>
+                    <span onClick={() => handleToggleChildren(item.label)}>
+                        {
+                            displayCurrentChildren[item.label] ? "-" : "+"
+                        }
+                    </span>
                     : null
                 }
             </div>
