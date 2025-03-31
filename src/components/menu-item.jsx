@@ -33,8 +33,8 @@ export default function MenuItem({item}) {
                 }
             </div>
             {
-                //? If the item has children, recursively render a nested MenuList
-                item && item.children && item.children.length > 0 ?
+                //? If the item has children, and useState displayCurrentChildren label is set to true, recursively render a nested MenuList
+                item && item.children && item.children.length > 0 && displayCurrentChildren[item.label] ?
                 <MenuList list={item.children} />
 
                 : null
