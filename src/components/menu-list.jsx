@@ -1,4 +1,5 @@
 import MenuItem from "./menu-item"
+import "../style/menu-list.css"
 
 //? Component that maps over a list of menu items and renders MenuItem for each
 export default function MenuList({list = []}){
