@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MenuList from "./menu-list";
 import "../style/menu-item.css"
+import {FaMinus, FaPlus} from "react-icons/fa"
 
 
 //? Component that represents an individual menu item
@@ -19,8 +20,6 @@ export default function MenuItem({item}) {
         })
     }
 
-    console.log(displayCurrentChildren)
-
     return (
         <li>
             <div className="item-label">
@@ -30,7 +29,7 @@ export default function MenuItem({item}) {
                     item && item.children && item.children.length ? 
                     <span onClick={() => handleToggleChildren(item.label)}>
                         {
-                            displayCurrentChildren[item.label] ? "-" : "+"
+                            displayCurrentChildren[item.label] ? <FaMinus/> : <FaPlus/>
                         }
                     </span>
                     : null
